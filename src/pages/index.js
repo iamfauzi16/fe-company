@@ -1,124 +1,71 @@
+
+import Button from './components/button'
+import ImageOnBoarding from '../../public/banner.jpg'
+
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { GlobeAsiaAustraliaIcon, BookOpenIcon } from '@heroicons/react/24/outline'
+export default function index(params) {
 
-const inter = Inter({ subsets: ['latin'] })
+  return(
+    <div className="container">
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <navbar className="flex justify-between items-center text-xl py-4">
+        <div>
+          Logo
+        </div>
+        <div>
+          <ul className="flex gap-12 font-light">
+            <li>Root</li>
+            <li>Product</li>
+            <li>Service</li>
+            <li>About</li>
+
+          </ul>
+        </div>
+        <div>
+        <Button type="submit" model="flex items-center gap-x-2 w-auto h-12 px-4 bg-blue-600 text-xl text-white font-medium rounded-lg hover:bg-blue-700 focus:ring-4 ring-blue-400 transition duration-200"> <GlobeAsiaAustraliaIcon className="h-6 w-6 text-white" />Get Started</Button>
+
+        </div>
+      </navbar>
+      <div className="lg:flex lg:flex-col justify-center items-center md:flex md:flex-col p-24">
+        <div>
+          <p className="lg:text-5xl font-bold text-center text-3xl">Realize Your Dream Website - Reliable Website Application Development Service</p>
+          <p className="lg:mt-4 text-center lg:text-2xl font-light text-gray-500 text-xl">Inovation - Security - Services & Professional</p>
+        </div>
+        <div className="flex lg:flex-row  lg:gap-x-4 mt-8 flex-col  gap-y-4">
+          <Button type="submit" model="flex items-center gap-x-2 w-auto h-16 px-4 bg-blue-600 text-xl text-white font-medium rounded-lg hover:bg-blue-700 focus:ring-4 ring-blue-400 transition duration-200"> <GlobeAsiaAustraliaIcon className="h-6 w-6 text-white" />Get Started</Button>
+          <Button type="submit" model="flex items-center gap-x-2 w-auto px-4 border-2 w-auto h-16 text-xl font-medium border-gray rounded-lg hover:bg-black hover:text-white transition duration-100"><BookOpenIcon className="h-6 w-6 hover:text-white" />My Services</Button>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="bg-slate-200 rounded-lg p-8">
+        {/* <Image src={ImageOnBoarding} alt="gambar"  className=" w-96"/> */}
+        <div className="flex flex-col justify-center items-center gap-y-4 text-center">
+          <p className="text-4xl font-semibold">We Professional Agency</p>
+          <p className="w-1/2 text-xl">We are consultants to help you build your business products online, we will provide the best service and try to meet your needs so that your business runs well.</p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4 mt-8">
+          <div className="bg-white p-6 rounded-sm ">
+            <p className="text-3xl font-extrabold text-gray-300">1</p>
+            <p className="text-lg font-medium">Landing Page Design</p>
+
+            <p className="text-gray-500 font-normal text-base mt-2">Fugiat ea irure adipisicing dolore ad deserunt proident tempor. Commodo id non commodo incididunt in. Elit cillum ut est magna id ad.</p>
+          </div>
+          <div className=" bg-white p-6 rounded-sm ">
+            <p className="text-3xl font-extrabold text-gray-300">2</p>
+            <p className="text-lg font-medium">Adsense Your Product</p>
+            <p className="text-gray-500 font-normal text-base mt-2">Fugiat ea irure adipisicing dolore ad deserunt proident tempor. Commodo id non commodo incididunt in. Elit cillum ut est magna id ad.</p>
+
+          </div>
+          <div className=" bg-white p-6 rounded-sm ">
+             <p className="text-3xl font-extrabold text-gray-300">3</p>
+             <p className="text-lg font-medium">Sistem Management Build</p>
+             <p className="text-gray-500 font-normal text-base mt-2">Fugiat ea irure adipisicing dolore ad deserunt proident tempor. Commodo id non commodo incididunt in. Elit cillum ut est magna id ad.</p>
+
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
-}
+};
